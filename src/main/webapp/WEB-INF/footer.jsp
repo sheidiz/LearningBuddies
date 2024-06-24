@@ -1,11 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <footer class="bg-light-brown px-5 py-3 text-center">
 	<h4 class="text-brown fw-bold fs-3">Learning Buddies</h4>
 	<ul class="list-unstyled d-flex flex-column flex-md-row justify-content-md-center gap-1 gap-md-5">
 		<li><a class="nav-link text-brown fs-5" href="/">Inicio</a></li>
-		<li><a class="nav-link text-brown fs-5" href="/faq">Preguntas
-				Frecuentes</a></li>
+		<li><a class="nav-link text-brown fs-5" href="/faq">Preguntas Frecuentes</a></li>
 		<li><a class="nav-link text-brown fs-5" href="/resources">Recursos</a></li>
 	</ul>
 	<div class="mx-auto my-2 border-top-brown pt-3 text-brown d-flex justify-content-center gap-2">
@@ -13,7 +11,7 @@
 		<a href="https://github.com/sheidiz" target="_blank">
 			<img alt="GitHub" src="./images/icons/github.png">
 		</a>
-		<a href="https://www.linkedin.com/in/sheila-diz/" target="_blank"> 		
+		<a href="https://www.linkedin.com/in/sheila-diz/" target="_blank">
 			<img alt="LinkedIn" src="./images/icons/linkedin.png">
 		</a>
 	</div>
