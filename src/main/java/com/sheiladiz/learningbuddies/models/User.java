@@ -4,11 +4,15 @@ import java.util.Date;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
@@ -25,20 +29,24 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@NotEmpty(message = "Email is required.")
-	@Email(message = "Invalid email.")
+	@NotEmpty(message = "Email requerido.")
+	@Email(message = "Email invalido.")
 	private String email;
 
-	@NotEmpty(message = "Password is required.")
-	@Size(min = 6, message = "Password needs at least 6 chars.")
+	@NotEmpty(message = "Contraseña requerida.")
+	@Size(min = 6, message = "Contraseña debe contener al menos 6 caracteres.")
 	private String password;
 
 	@Transient
-	@NotEmpty(message = "Confirmation is required.")
-	@Size(min = 6, message = "Confirmation needs at least 6 chars.")
+	@NotEmpty(message = "Repita la contraseña")
+	@Size(min = 6, message = "Contraseña debe contener al menos 6 caracteres.")
 	private String confirmation;
 
 	private String authProvider; // local or google
+
+	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@JoinColumn(name = "profile_id", referencedColumnName = "id")
+	private Profile profile;
 
 	@Column(updatable = false)
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
@@ -104,6 +112,14 @@ public class User {
 
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
+	}
+
+	public Profile getProfile() {
+		return profile;
+	}
+
+	public void setProfile(Profile profile) {
+		this.profile = profile;
 	}
 
 	@PrePersist
