@@ -11,6 +11,10 @@
 	--dark-grey: rgba(42, 42, 42, 0.6);
 }
 
+.h-fit {
+	height: fit-content;
+}
+
 /*TEXT COLORS*/
 .text-light {
 	color: var(--light);
@@ -84,6 +88,10 @@
 	border-top: 1px solid var(--brown);
 }
 
+.border-bottom-light-brown {
+	border-bottom: 2px solid var(--light-brown);
+}
+
 .border-color-light-brown {
 	border-color: var(--light-brown) !important;
 }
@@ -102,6 +110,12 @@
 
 .carousel-item .rounded-pill {
 	padding-right: 50px !important;
+}
+
+@media (min-width: 768px) {
+	.w-md-75 {
+		width: 75% !important;
+	}
 }
 
 @media (min-width: 1200px) {
