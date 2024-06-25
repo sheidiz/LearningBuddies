@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <main class="my-2">
 	<section class="px-2 px-lg-5 w-1200 my-5 d-flex">
 		<div
@@ -18,7 +19,7 @@
 			</div>
 		</div>
 		<div class="d-none d-md-block mx-xl-5">
-			<img alt="People studying together" src="./images/home.png" class="mx-xl-5" id="home-img">
+			<img src="<c:url value='/images/home.png'/>" alt="Personas estudiando" class="mx-xl-5" id="home-img">
 		</div>
 	</section>
 
