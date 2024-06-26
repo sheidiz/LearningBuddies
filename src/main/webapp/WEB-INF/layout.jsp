@@ -4,6 +4,10 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Last-Modified" content="0">
+<meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+<meta http-equiv="Pragma" content="no-cache">
 <title>Learning Buddies</title>
 <!-- Change to dynamic naming -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -11,7 +15,7 @@
 <link href="/css/style.css" rel="stylesheet">
 <link href="/css/registration.css" rel="stylesheet">
 </head>
-<body class="bg-light">
+<body class="bg">
 
 	<jsp:include page="header.jsp" />
 	<div class="content">

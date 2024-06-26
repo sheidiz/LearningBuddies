@@ -1,12 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<header class="bg-light px-2 px-lg-5">
+<header class="bg px-2 px-lg-5">
 
-	<nav class="navbar navbar-expand-md bg-body-tertiary">
+	<nav class="navbar navbar-expand-md">
 
 		<div class="container-fluid">
 			<a class="col-3 col-lg-4 navbar-brand hover-scale-1 d-flex gap-1" href="/">
-				<img src="<c:url value='/images/icons/logoicon.png'/>" alt="Logo"> <span class="fw-bold text-dark-green">Learning
+				<img src="<c:url value='/images/icons/logoicon.png'/>" alt="Logo"> <span class="fw-bold text-dark-green dark-text-light-green">Learning
 					Buddies</span>
 			</a>
 
@@ -36,22 +36,16 @@
 							<a class="d-block d-md-none nav-link text-medium-green" href="/registration">Registrarme</a>
 						</c:otherwise>
 					</c:choose>
-
-
-
-
 				</div>
 			</div>
 
 			<div class="d-none d-md-block">
 				<div class="dropdown d-none d-md-flex" id="btn-account">
-					<button class="ms-auto rounded-pill px-3 border-light-green dropdown-toggle" type="button"
+					<button class="ms-auto bg rounded-pill px-3 border-light-green dropdown-toggle" type="button"
 						data-bs-toggle="dropdown" aria-expanded="false">
 						<img src="<c:url value='/images/icons/account.png'/>" alt="Menu Cuenta" class="py-1">
 					</button>
 					<ul class="dropdown-menu">
-
-
 						<c:choose>
 							<c:when test="${not empty userInSession}">
 								<li><a class="dropdown-item" href="/profile">Mi Perfil</a></li>
@@ -62,9 +56,6 @@
 								<li><a class="dropdown-item" href="/registration">Registrarme</a></li>
 							</c:otherwise>
 						</c:choose>
-
-
-
 					</ul>
 				</div>
 			</div>

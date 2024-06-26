@@ -8,16 +8,16 @@
 	</div>
 
 	<div
-		class="form-container bg-light rounded-start-4 my-5 py-5 px-2 d-flex flex-column align-items-start align-items-md-center">
+		class="form-container bg dark-bg-medium-green rounded-start-4 my-5 py-5 px-2 d-flex flex-column align-items-start align-items-md-center">
 		<div class="my-auto h-fit w-100 w-md-75 d-md-flex flex-md-column gap-3">
 			<div>
-				<h1 class="text-dark fw-semibold">Crear cuenta</h1>
-				<div class="line-150px mb-3"></div>
+				<h1 class="text-dark dark-text-light fw-semibold">Crear cuenta</h1>
+				<div class="line-150px dark-line-150px mb-3"></div>
 			</div>
 			<form:form action="/register" method="POST" modelAttribute="newUser" class="w-100 d-flex flex-column gap-3">
 				<div>
-					<form:label path="email" class="fw-semibold">Email:</form:label>
-					<div class="w-100 pb-2 border-bottom-light-brown d-flex gap-2">
+					<form:label path="email" class="dark-text-light fw-semibold">Email:</form:label>
+					<div class="w-100 pb-2 border-bottom-light-brown dark-border-bottom-light-green d-flex gap-2">
 						<img src="<c:url value='/images/icons/email.png'/>" alt="Email Icon" class="icon mt-1">
 						<div class="fw-semibold text-dark-grey">|</div>
 						<form:input path="email" class="w-100 text-dark-grey fw-medium input" placeholder="janedoe@email.com" />
@@ -25,8 +25,8 @@
 					<form:errors path="email" class="text-danger" />
 				</div>
 				<div>
-					<form:label path="password" class="fw-semibold">Contraseña:</form:label>
-					<div class="w-100 pb-2 border-bottom-light-brown d-flex gap-2">
+					<form:label path="password" class="dark-text-light fw-semibold">Contraseña:</form:label>
+					<div class="w-100 pb-2 border-bottom-light-brown dark-border-bottom-light-green d-flex gap-2">
 						<img src="<c:url value='/images/icons/password.png'/>" alt="Password Icon" class="icon mt-1">
 						<div class="fw-semibold text-dark-grey">|</div>
 						<form:password path="password" class="w-100 text-dark-grey fw-medium input" placeholder="******" />
@@ -42,12 +42,12 @@
 					</div>
 					<form:errors path="confirmation" class="text-danger" />
 				</div>
-				<input type="submit" class="px-2 py-1 rounded-pill bg-light-brown border-0 text-light fw-semibold"
+				<input type="submit" class="px-2 py-1 rounded-pill bg-light-brown dark-bg-light-green border-0 text-light fw-semibold"
 					value="Registrarme" />
 			</form:form>
 			<p class="mt-3 mx-auto text-center fw-semibold">
 				¿Ya tenés una cuenta?
-				<a href="/login" class="text-medium-green fw-bold">Iniciar sesión</a>
+				<a href="/login" class="text-medium-green dark-text-light fw-bold">Iniciar sesión</a>
 			</p>
 		</div>
 	</div>
